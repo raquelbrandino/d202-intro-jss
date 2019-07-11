@@ -11,10 +11,17 @@
 
 //console.log ('saiu do laço');
 
-let lancesDeEscada = Number(prompt ('Quantos lances de escada você gostaria?'))
+let promptLancesDeEscada = prompt ('Quantos lances de escada você gostaria?');
+let lancesDeEscada = Number(promptLancesDeEscada);
 let material = prompt ('Qual o material da sua escada?');
 let desenho = '';
+
 let i = 0;
+
+while(isNaN(lancesDeEscada)){
+    lancesDeEscada = Number(prompt('Você digitou ' + promptLancesDeEscada + '. O programa só aceita valores numéricos.Digite um numero por favor.'))
+}
+
 while (i < lancesDeEscada){
     desenho = desenho + material;
     console.log (desenho);
